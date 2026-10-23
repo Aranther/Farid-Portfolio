@@ -276,8 +276,7 @@ var qs=[['executes briefs properly','He <mark>executes briefs properly</mark> an
 var rot=[-1.5,1.5,-1,2,-2];
 document.getElementById('board').innerHTML=qs.map(function(q,i){return '<figure class="note reveal" style="--rot:'+rot[i]+'deg;--d:'+(i*.08)+'s"><div class="in"><span class="pin"></span><blockquote class="q">'+q[1]+'</blockquote><figcaption class="who"><i></i><span><b>Client Name</b><small>Role, Company</small></span></figcaption></div></figure>'}).join('');
 /* clients */
-var LOGOS=[["Kimia Farma","data:images/kimia-farma.png"]];
-document.getElementById('mtrack').innerHTML=LOGOS.concat(LOGOS).map(function(l,i){var dup=i>=LOGOS.length;return '<span'+(dup?' aria-hidden="true"':'')+'><img src="'+l[1]+'" width="400" height="160" alt="'+(dup?'':l[0]+' logo')+'" decoding="async"></span>'}).join('');
+var LOGOS=[["Kimia Farma","data:images/kimia-farma.png"]];document.getElementById('mtrack').innerHTML=LOGOS.concat(LOGOS).map(function(l,i){var dup=i>=LOGOS.length;return '<span'+(dup?' aria-hidden="true"':'')+'><img src="'+l[1]+'" width="400" height="160" alt="'+(dup?'':l[0]+' logo')+'" decoding="async"></span>'}).join('');
 if(!hov&&'IntersectionObserver' in window){var fo=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('open',e.intersectionRatio>.6)})},{threshold:[0,.6,1]});document.querySelectorAll('.fitem').forEach(function(f){fo.observe(f)})}
 /* reveal */
 var rv=document.querySelectorAll('.reveal');
